@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_script_operation">
+    <sys_rte_eb_script_operation action="INSERT_OR_UPDATE">
+        <conditional_fields/>
+        <conditional_script><![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]></conditional_script>
+        <is_conditional>false</is_conditional>
+        <name>Script Operation - domain_name</name>
+        <operation_group/>
+        <order>1700</order>
+        <script><![CDATA[(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        var a = batch[i].input;
+        var b = convertOSDomain(a);
+        output[i] = a;
+   }
+   
+   function convertOSDomain(domainName){
+      if (!domainName || domainName === '(none)' || domainName === 'No Domain' || !domainName.split) {
+            return 'none';
+        }
+
+        var parts = domainName.split('.');
+
+        return parts[0].toLowerCase();
+   }
+   
+})(batch, output);
+]]></script>
+        <source_sys_rte_eb_field display_value="domain_name">b527cd7e53d030106747ddeeff7b1285</source_sys_rte_eb_field>
+        <source_sys_rte_eb_fields/>
+        <sys_class_name>sys_rte_eb_script_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-11 22:32:47</sys_created_on>
+        <sys_id>6a451277536030106747ddeeff7b122d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Script Operation - domain_name</sys_name>
+        <sys_package display_value="Service Graph Connector for Tanium" source="sn_tanium_integ">0b9e6542ea5830100a1fb4497d183b67</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="SG Tanium Hardware and Software">9c27c97e53d030106747ddeeff7b12f3</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="temp">d1278d7e53d030106747ddeeff7b1288</sys_rte_eb_entity>
+        <sys_scope display_value="Service Graph Connector for Tanium">0b9e6542ea5830100a1fb4497d183b67</sys_scope>
+        <sys_update_name>sys_rte_eb_script_operation_6a451277536030106747ddeeff7b122d</sys_update_name>
+        <sys_updated_by>DavidSu</sys_updated_by>
+        <sys_updated_on>2023-11-17 15:59:45</sys_updated_on>
+        <target_sys_rte_eb_field display_value="u_converted_domain_name">a6451277536030106747ddeeff7b122a</target_sys_rte_eb_field>
+        <target_sys_rte_eb_fields/>
+        <type display_value="Script Operation">941f88e273b333002b6265a751ab9e84</type>
+        <use_unique_input_sets>true</use_unique_input_sets>
+    </sys_rte_eb_script_operation>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Service Graph Connector for Tanium">0b9e6542ea5830100a1fb4497d183b67</claim_owner_scope>
+        <claim_timestamp>18c288605530000001</claim_timestamp>
+        <metadata_update_name>sys_rte_eb_script_operation_6a451277536030106747ddeeff7b122d</metadata_update_name>
+        <previous_claim_app_version>1.5.0</previous_claim_app_version>
+        <previous_claim_name>Service Graph Connector for Tanium</previous_claim_name>
+        <previous_claim_scope>0b9e6542ea5830100a1fb4497d183b67</previous_claim_scope>
+        <sys_created_by>DavidSu</sys_created_by>
+        <sys_created_on>2023-12-02 03:15:21</sys_created_on>
+        <sys_id>469961a69732b1dcb9a13b0e6253afc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>DavidSu</sys_updated_by>
+        <sys_updated_on>2023-12-02 03:15:21</sys_updated_on>
+    </sys_claim>
+</record_update>

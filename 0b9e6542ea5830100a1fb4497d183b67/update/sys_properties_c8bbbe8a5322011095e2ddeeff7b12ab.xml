@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>basic,token</choices>
+        <description>To enable the basic authentication, update the Value field to basic. &#13;
+To enable the token authentication, update the Value field to token. </description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>sn_tanium_integ.auth_type</name>
+        <read_roles/>
+        <suffix>auth_type</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-31 21:08:56</sys_created_on>
+        <sys_id>c8bbbe8a5322011095e2ddeeff7b12ab</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>sn_tanium_integ.auth_type</sys_name>
+        <sys_package display_value="Service Graph Connector for Tanium" source="sn_tanium_integ">0b9e6542ea5830100a1fb4497d183b67</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Service Graph Connector for Tanium">0b9e6542ea5830100a1fb4497d183b67</sys_scope>
+        <sys_update_name>sys_properties_c8bbbe8a5322011095e2ddeeff7b12ab</sys_update_name>
+        <sys_updated_by>DavidSu</sys_updated_by>
+        <sys_updated_on>2023-11-17 15:21:47</sys_updated_on>
+        <type>choicelist</type>
+        <value>token</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=c8bbbe8a5322011095e2ddeeff7b12ab"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Service Graph Connector for Tanium">0b9e6542ea5830100a1fb4497d183b67</claim_owner_scope>
+        <claim_timestamp>18c2886057c0000001</claim_timestamp>
+        <metadata_update_name>sys_properties_c8bbbe8a5322011095e2ddeeff7b12ab</metadata_update_name>
+        <previous_claim_app_version>1.5.0</previous_claim_app_version>
+        <previous_claim_name>Service Graph Connector for Tanium</previous_claim_name>
+        <previous_claim_scope>0b9e6542ea5830100a1fb4497d183b67</previous_claim_scope>
+        <sys_created_by>DavidSu</sys_created_by>
+        <sys_created_on>2023-12-02 03:15:21</sys_created_on>
+        <sys_id>0a9961a69732b1dcb9a13b0e6253afc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>DavidSu</sys_updated_by>
+        <sys_updated_on>2023-12-02 03:15:21</sys_updated_on>
+    </sys_claim>
+</record_update>

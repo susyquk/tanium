@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_field">
+    <sys_rte_eb_field action="INSERT_OR_UPDATE">
+        <field>ad_organizational_unit</field>
+        <name>ad_organizational_unit</name>
+        <sys_class_name>sys_rte_eb_field</sys_class_name>
+        <sys_created_by>DavidSu</sys_created_by>
+        <sys_created_on>2023-11-17 15:32:43</sys_created_on>
+        <sys_id>498287b5db2ab910b324af6d139619af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ad_organizational_unit</sys_name>
+        <sys_package display_value="Service Graph Connector for Tanium" source="sn_tanium_integ">0b9e6542ea5830100a1fb4497d183b67</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="SG Tanium Hardware and Software">9c27c97e53d030106747ddeeff7b12f3</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="Import">d92705ba53d030106747ddeeff7b1238</sys_rte_eb_entity>
+        <sys_scope display_value="Service Graph Connector for Tanium">0b9e6542ea5830100a1fb4497d183b67</sys_scope>
+        <sys_update_name>sys_rte_eb_field_498287b5db2ab910b324af6d139619af</sys_update_name>
+        <sys_updated_by>DavidSu</sys_updated_by>
+        <sys_updated_on>2023-11-17 15:32:43</sys_updated_on>
+    </sys_rte_eb_field>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Service Graph Connector for Tanium">0b9e6542ea5830100a1fb4497d183b67</claim_owner_scope>
+        <claim_timestamp>18c2886058a0000001</claim_timestamp>
+        <metadata_update_name>sys_rte_eb_field_498287b5db2ab910b324af6d139619af</metadata_update_name>
+        <previous_claim_app_version>1.5.0</previous_claim_app_version>
+        <previous_claim_name>Service Graph Connector for Tanium</previous_claim_name>
+        <previous_claim_scope>0b9e6542ea5830100a1fb4497d183b67</previous_claim_scope>
+        <sys_created_by>DavidSu</sys_created_by>
+        <sys_created_on>2023-12-02 03:15:21</sys_created_on>
+        <sys_id>4a9961a69732b1dcb9a13b0e6253afca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>DavidSu</sys_updated_by>
+        <sys_updated_on>2023-12-02 03:15:21</sys_updated_on>
+    </sys_claim>
+</record_update>

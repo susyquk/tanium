@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="scheduled_import_set">
+    <scheduled_import_set action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <concurrent_import>true</concurrent_import>
+        <condition/>
+        <conditional>false</conditional>
+        <connection_override/>
+        <data_source display_value="SG-Tanium Hardware and Software">ff645b22531030106747ddeeff7b125b</data_source>
+        <entered_time/>
+        <map/>
+        <max_drift/>
+        <name>SG-Tanium Hardware and Software</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <order/>
+        <parent/>
+        <partition_method>customSize</partition_method>
+        <partition_script><![CDATA[(function partitionHash(import_set_row) {
+
+	// Add your code here
+	
+	// eg:
+	// return import_set_row.u_important_category;
+	// This would ensure all rows with the same 'u_important_category' value will be in the same Import Set.
+
+	 return import_set_row.sys_import_row;
+
+})(import_set_row);]]></partition_script>
+        <partition_size>1000</partition_size>
+        <post_script><![CDATA[	var discoverySource = "SG-TaniumSN";
+	var lastSuccessImportTime = data_source.last_success_import_time;
+	var CONNECTION_SYS_ID = "";
+	var queryType = "ENDSWITH";
+	var authType = gs.getProperty("sn_tanium_integ.auth_type", 'basic');
+	if (authType == 'token') {
+		CONNECTION_SYS_ID = "bc12134a5362011095e2ddeeff7b1245";
+	} 
+	else { 
+		CONNECTION_SYS_ID = "62ab0792531030106747ddeeff7b126a";
+	}
+
+	var sourceNativeKeyFilter = CONNECTION_SYS_ID;
+	var sourceFeed = "SG Tanium Hardware and Software";
+	new sn_tanium_integ.TaniumRemoveSoftwareUtil().removeSoftware(discoverySource, lastSuccessImportTime, sourceNativeKeyFilter, sourceFeed, queryType);
+	
+	var curTime = new GlideDateTime();
+	curTime.addSeconds(1);
+	data_source.last_success_import_time = curTime;
+	data_source.update();]]></post_script>
+        <post_script_bool>true</post_script_bool>
+        <pre_script/>
+        <pre_script_bool>false</pre_script_bool>
+        <record_source/>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-02 00:00:00</run_period>
+        <run_start/>
+        <run_time>1970-01-02 04:22:22</run_time>
+        <run_type>daily</run_type>
+        <show_connection_override>true</show_connection_override>
+        <synchronize_inserts>true</synchronize_inserts>
+        <sys_class_name>scheduled_import_set</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-28 07:51:49</sys_created_on>
+        <sys_id>a22ec572532530106747ddeeff7b12fe</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>SG-Tanium Hardware and Software</sys_name>
+        <sys_package display_value="Service Graph Connector for Tanium" source="sn_tanium_integ">0b9e6542ea5830100a1fb4497d183b67</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Service Graph Connector for Tanium">0b9e6542ea5830100a1fb4497d183b67</sys_scope>
+        <sys_update_name>scheduled_import_set_a22ec572532530106747ddeeff7b12fe</sys_update_name>
+        <sys_updated_by>DavidSu</sys_updated_by>
+        <sys_updated_on>2023-11-17 16:02:28</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+        <use_child_connection>false</use_child_connection>
+    </scheduled_import_set>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Service Graph Connector for Tanium">0b9e6542ea5830100a1fb4497d183b67</claim_owner_scope>
+        <claim_timestamp>18c288605660000001</claim_timestamp>
+        <metadata_update_name>scheduled_import_set_a22ec572532530106747ddeeff7b12fe</metadata_update_name>
+        <previous_claim_app_version>1.5.0</previous_claim_app_version>
+        <previous_claim_name>Service Graph Connector for Tanium</previous_claim_name>
+        <previous_claim_scope>0b9e6542ea5830100a1fb4497d183b67</previous_claim_scope>
+        <sys_created_by>DavidSu</sys_created_by>
+        <sys_created_on>2023-12-02 03:15:21</sys_created_on>
+        <sys_id>429961a69732b1dcb9a13b0e6253afc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>DavidSu</sys_updated_by>
+        <sys_updated_on>2023-12-02 03:15:21</sys_updated_on>
+    </sys_claim>
+</record_update>

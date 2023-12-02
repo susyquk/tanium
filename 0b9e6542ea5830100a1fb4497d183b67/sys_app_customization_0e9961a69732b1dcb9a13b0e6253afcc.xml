@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_customization">
+    <sys_app_customization action="INSERT_OR_UPDATE">
+        <sys_created_by>DavidSu</sys_created_by>
+        <sys_created_on>2023-12-02 03:15:21</sys_created_on>
+        <sys_id>0e9961a69732b1dcb9a13b0e6253afcc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>DavidSu</sys_updated_by>
+        <sys_updated_on>2023-12-02 03:15:50</sys_updated_on>
+        <vendor_app display_value="Service Graph Connector for Tanium">0b9e6542ea5830100a1fb4497d183b67</vendor_app>
+        <vendor_app_version>1.5.0</vendor_app_version>
+        <version>1.0.1</version>
+        <war_version>glide-vancouver-07-06-2023__patch2-hotfix1-10-04-2023_10-06-2023_1235.zip</war_version>
+    </sys_app_customization>
+</record_update>
